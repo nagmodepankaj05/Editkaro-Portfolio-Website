@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editkaro.in - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎬 Editkaro.in Portfolio</h1>
+    <p>Social Media Marketing & Video Editing Agency</p>
+  </header>
+
+  <nav>
+    <button onclick="filterVideos('all')">All</button>
+    <button onclick="filterVideos('short')">Short-form</button>
+    <button onclick="filterVideos('long')">Long-form</button>
+    <button onclick="filterVideos('gaming')">Gaming</button>
+    <button onclick="filterVideos('football')">Football</button>
+    <button onclick="filterVideos('ads')">Ads</button>
+    <button onclick="filterVideos('anime')">Anime</button>
+    <button onclick="filterVideos('documentary')">Documentary</button>
+    <button onclick="filterVideos('color')">Color Grading</button>
+  </nav>
+
+  <section class="portfolio" id="portfolio">
+    <div class="video-card" data-category="short" onclick="openLightbox('short_video1.mp4')">
+      <video src="short_video1.mp4"></video>
+      <div class="category">Short-form Video</div>
+    </div>
+    <div class="video-card" data-category="long" onclick="openLightbox('long1.mp4')">
+      <video src="long1.mp4"></video>
+      <div class="category">Long-form Video</div>
+    </div>
+    <div class="video-card" data-category="gaming" onclick="openLightbox('gaming1.mp4')">
+      <video src="gaming1.mp4"></video>
+      <div class="category">Gaming Edit</div>
+    </div>
+    <div class="video-card" data-category="football" onclick="openLightbox('football1.mp4')">
+      <video src="football1.mp4"></video>
+      <div class="category">Football Edit</div>
+    </div>
+    <div class="video-card" data-category="ads" onclick="openLightbox('videos/ad1.mp4')">
+      <video src="videos/ad1.mp4"></video>
+      <div class="category">E-commerce Ad</div>
+    </div>
+    <div class="video-card" data-category="anime" onclick="openLightbox('anime1.mp4')">
+      <video src="anime1.mp4"></video>
+      <div class="category">Anime Edit</div>
+    </div>
+    <div class="video-card" data-category="documentary" onclick="openLightbox('doc1.mp4')">
+      <video src="doc1.mp4"></video>
+      <div class="category">Documentary</div>
+    </div>
+    <div class="video-card" data-category="color" onclick="openLightbox('videos/color1.mp4')">
+      <video src="videos/color1.mp4"></video>
+      <div class="category">Color Grading</div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <span onclick="closeLightbox()">✖</span>
+    <video id="lightboxVideo" controls autoplay></video>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
